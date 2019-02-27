@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="asientos.css">
+
+</head>
+<body>
+<body onload="cargardatosdelapelicula()">
+
+<header>
+    <span id="titulodelapelicula"></span>
+</header>
+  
+
+<div class="seatStructure">
+<center>
+  
+<table id="seatsBlock">
+ <p id="notification"></p>
+  <tr>
+    <td colspan="14"><div class="screen">PANTALLA</div></td>
+    <td rowspan="20">
+    </td>
+    
+    <br/>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td>6</td>
+
+    <td>5</td>
+    <td></td>
+    <td>4</td>
+    <td>3</td>
+
+    <td>2</td>
+
+    <td>1</td>
+
+</tr>
+  
+<tr>
+    <td>A</td>
+     <td><div class="popup" onclick="myFunction()"><img src="seat.png" id="A6" value="A6">
+    <input class="popuptext"  type="text" placeholder="Nombre" name="nombre" required>
+    <input class="popuptext"  type="text" placeholder="Carné" name="carne" required>
+    <input class="popuptext"  type="text" placeholder="Sección" name="seccion" required>
+
+
+</div></td>
+    
+    <td><img src="seat.png" id="A5" value="A5"></td>
+    <td class="seatGap"></td>
+    <td><img src="seat.png" id="A1" value="A1"></td>
+    <td><img src="seat.png" id="A2" value="A2"></td>
+    <td><img src="seat.png" id="A3" value="A3"></td>
+    <td><img src="seat.png" value="A4"></td>
+   
+  </tr>
+  
+  <tr>
+    <td>B</td>
+
+    <td><img src="seat.png" id="B5" value="B5"></td>
+    <td><img src="seat.png" id="B6" value="B6"></td>
+    <td></td>
+    <td><img src="seat.png" id="B1" value="B1"></td>
+    <td><img src="seat.png" id="B2" value="B2"></td>
+    <td><img src="seat.png" id="B3" value="B3"></td>
+    <td><img src="seat.png" id="B4" value="B4"></td>
+    
+  </tr>
+  
+  <tr>
+    <td>C</td>
+
+    <td><img src="seat.png" id="C5" value="C5"></td>
+    <td><img src="seat.png" id="C6" value="C6"></td>
+      <td></td>
+    <td><img src="seat.png" id="C1" value="C1"></td>
+    <td><img src="seat.png" id="C2" value="C2"></td>
+    <td><img src="seat.png" id="C3" value="C3"></td>
+    <td><img src="seat.png" id="C4" value="C4"></td>
+       
+</tr>
+  
+<tr>
+    <td>D</td>
+
+    <td><img src="seat.png" id="D5" value="D5"></td>
+      <td></td>
+        <td></td>
+    <td><img src="seat.png" id="D1" value="D1"></td>
+    <td><img src="seat.png" id="D2" value="D2"></td>
+    <td><img src="seat.png" id="D3" value="D3"></td>
+    <td><img src="seat.png" id="D4" value="D4"></td>
+        
+
+</tr>
+  
+<tr>
+    <td>E</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><img src="seat.png" id="E1"></td>
+    <td><img src="seat.png" id="E2" value="E2"></td>
+    <td><img src="seat.png" id="E3" value="E3"></td>
+    <td><img src="seat.png" id="E4" value="E4"></td>
+</tr>
+  
+<tr>
+    <td>F</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td><img src="seat.png" id="F1" value="F1"></td>
+    <td><img src="seat.png" id="F2" value="F2"></td>
+    <td><img src="seat.png" id="F3" value="F3"></td>
+    <td><img src="seat.png" id="F4" value="F4"></td>
+</tr>
+  
+<tr>
+    <td>G</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td><img src="seat.png" id="G1" value="G1"></td>
+    <td><img src="seat.png" id="G2" value="G2"></td>
+    <td><img src="seat.png" id="G3" value="G3"></td>
+    <td><img src="seat.png" id="G4" value="G4"></td>
+
+</tr>
+  
+<tr>
+    <td>H</td>
+     <td></td>
+    <td></td>
+    <td></td>
+    <td><img src="seat.png" id="H1" value="H1"></td>
+    <td><img src="seat.png" id="H2" value="H2"></td>
+    <td><img src="seat.png" id="H3" value="H3"></td>
+    <td><img src="seat.png" id="H4" value="H4"></td>
+
+</tr>
+  
+</table>
+  
+<br/><br/>
+
+</table>
+</center>
+</div>
+<script type="text/javascript">
+
+function cargardatosdelapelicula()
+    
+    {
+        
+        var pelicula = JSON.parse(localStorage.getItem('peliculaseleccionada'))
+        
+        document.getElementById("titulodelapelicula").innerHTML += pelicula[0].NOMBRE + "<hr><p id='peliculainfo'>Tanda:</p> "+pelicula[0].FECHA+ "<br><p id='peliculainfo'> Inicia: </p>"+pelicula[0].HORAINICIO +":"+pelicula[0].MINUTOINICIO
+        
+        
+        
+        
+    }
+
+</script>
+ <script type="text/javascript" src="asientos.js"></script>
+</body>
+</html>
